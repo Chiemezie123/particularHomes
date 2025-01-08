@@ -1,0 +1,95 @@
+/* .container {
+  display: flex;
+
+  background: var(--Neutral-Neutral-900, #0d0f11);
+}
+
+.menu {
+  flex: 1;
+  background: var(--Neutral-Neutral-800, #191d23);
+  padding: 20px;
+  height: 100vh;
+  border : 1px solid red;
+ 
+}
+
+.content {
+  flex: 4;
+  padding: 20px;
+}
+
+.wrapper {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.main {
+  flex: 3;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.side {
+  flex: 1;
+} */
+
+/* Fixes the sidebar to the viewport */
+.container {
+    display: flex;
+    position: relative;
+  }
+  
+  .menu {
+    flex: 1;
+   
+    height: 100vh;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    z-index: 1;
+    /* 
+    
+    width: 300px;
+    z-index: 1000;  */
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 280px;
+    overflow: auto;
+  }
+
+  
+  .wrapper {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+  }
+  
+  .main {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .cards {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+  }
+  
+  .side {
+    flex: 1;
+  }
+  
