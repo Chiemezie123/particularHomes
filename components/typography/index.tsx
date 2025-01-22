@@ -7,79 +7,20 @@ import { cva } from "class-variance-authority";
 import { TypographyProps, variantMapping } from "./index.types";
 
 const colorClasses = {
-  // Red
-  R50: "text-R50",
-  R75: "text-R75",
-  R100: "text-R100",
-  R200: "text-R200",
-  R300: "text-R300",
-  R400: "text-R400",
-  R500: "text-R500",
-
-  // Green
-  GL: "text-GL",
-  GLH: "text-GLH",
-  GLA: "text-GLA",
-  GN: "text-GN",
-  GNH: "text-GNH",
-  GB: "text-GB",
-  GBA: "text-GBA",
-  GD: "text-GD",
-  GDH: "text-GDH",
-  GDA: "text-GDA",
-  GDD: "text-GDD",
-
-  // Secondary Salmon Green
-  SLGL: "text-SLGL",
-  SLGLH: "text-SLGLH",
-  SLGLA: "text-SLGLA",
-  SLGN: "text-SLGN",
-  SLGNH: "text-SLGNH",
-  SLGB: "text-SLGB",
-  SLGBA: "text-SLGBA",
-  SLGD: "text-SLGD",
-  SLGDH: "text-SLGDH",
-  SLGDA: "text-SLGDA",
-  SLGDD: "text-SLGDD",
-
+  white:"text-white",
   // Tertiary gray
-  TGL: "text-TGL",
-  TGLH: "text-TGLH",
-  TGLA: "text-TGLA",
-  TGN: "text-TGN",
-  TGNH: "text-TGNH",
-  TGB: "text-TGB",
-  TGBA: "text-TGBA",
-  TGD: "text-TGD",
-  TGDH: "text-TGDH",
-  TGDA: "text-TGDA",
-  TGDD: "text-TGDD",
-
-  // Neutral (Light)
-  N0: "text-N0",
-  N10: "text-N10",
-  N20: "text-N20",
-  N30: "text-N30",
-  N40: "text-N40",
-  N50: "text-N50",
-
-  // Neutral (Mid)
-  N60: "text-N60",
-  N70: "text-N70",
-  N80: "text-N80",
-  N90: "text-N90",
-  N100: "text-N100",
-  N200: "text-N200",
-  N300: "text-N300",
-  N400: "text-N400",
-
-  // Neutral (Dark)
-  N500: "text-N500",
-  N600: "text-N600",
-  N700: "text-N700",
-  N800: "text-N800",
-  N900: "text-N900",
-
+  grey1:"text-greyish",
+  grey2:"text-lightGreyish",
+  green1:"text-darkGreenish",
+  green2:"text-lightGreenish",
+  green3:"text-lighterGreenish",
+  black:"text-[#000]",
+  dashboardGrey:"text-dashboardGrey",
+  dashboardGreen:"text-dashboardGreen",
+  dashboardGrey2:"text-dashboardGrey2",
+  tabUnderlineColor:"text-tabUnderlineColor",
+  sideBarColor:"text-sideBarColor",
+  navPathColor: "text-navPathColor",
   //Text Colors
   "text-default": "text-text-default",
   "text-light": "text-text-light",
@@ -108,7 +49,9 @@ export const typography = cva("", {
       div: "",
     },
     font: {
-      brCobane: "font-brCobane",
+      Inter: "font-inter",
+      poppins:"font-poppins",
+      montserrat:"font-montserrat"
     },
     color: colorClasses,
     fontWeight: {
@@ -144,9 +87,9 @@ function Typography(props: TypographyProps) {
     gutterBottom,
     noWrap,
     align = "left",
-    color = "N700",
+    color = "white",
     customClassName = "",
-    font = "brCobane",
+    font = "poppins",
     children,
     className,
     ...rest

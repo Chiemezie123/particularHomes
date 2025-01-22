@@ -11,6 +11,11 @@ import { usePathname } from 'next/navigation';
 
 export default function Navbar() {
   const pathname = usePathname();
+  const onlyFirstPath = pathname.split('/').pop()
+ 
+  function capitalizeFirstLetter(word:string| undefined) {
+    return word.charAt(0).toUpperCase() + word.slice(1);
+}
 
   return (
     <div className='flex justify-between items-center self-stretch px-6 py-4 border-b border-[#D3DBDA] bg-[#FBFFFF]'>
@@ -19,8 +24,8 @@ export default function Navbar() {
             <NavBarHomeIcon/>
           </div>
           <div>
-            <Typography>
-            {pathname.split('/').pop()}
+            <Typography font="Inter" color="navPathColor" fontWeight="bold" >
+            {capitalizeFirstLetter(onlyFirstPath)}
             </Typography>
           </div>
         </div>
@@ -36,7 +41,7 @@ export default function Navbar() {
               <Image src={placeHolderImage} alt={"placeHolder"} width={48} height={48}/>
             </div>
             <div className='flex items-center'>
-              <Typography>Jake Blake</Typography>
+              <Typography font="Inter" color="black">Jake Blake</Typography>
               <DropDown/>
             </div>
           </div>

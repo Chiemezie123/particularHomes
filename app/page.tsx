@@ -1,9 +1,18 @@
-
+'use client'
+import FirstSection from "./components/firstSection";
+import Footer from "./components/footer";
+import FourthSection from "./components/fourthSection";
+import SecondSection from "./components/secondSection";
+import ThirdSection from "./components/thirdSection";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      this is the landing page , this has not yet been created !
-     </div>
+    <div className="w-full h-full">
+      <FirstSection/>
+      <SecondSection/>
+      <ThirdSection/>
+      <FourthSection/>
+      <Footer/>
+    </div>
   );
 }

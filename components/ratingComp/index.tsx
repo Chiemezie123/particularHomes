@@ -11,12 +11,12 @@ export default function RatingComp(props:RatingCompProps) {
   return (
     <div className='flex h-[200px] p-3 flex-col justify-between items-start flex-[1_0_0] rounded-[16px] bg-[var(--White,#FFF)] shadow-[0px_4px_16px_0px_rgba(0,0,0,0.12)]'>
         <div>
-            <Typography customClassName='text-[#696969] font-inter text-[16px] font-normal leading-normal'>
+            <Typography color="dashboardGrey2" font="Inter" fontWeight="regular"  customClassName='text-[] font-inter text-[16px] font-normal leading-normal'>
             {title}
             </Typography>
         </div>
         <div>
-            <Typography customClassName='text-[var(--Paircular-Variant-2,#008273)] font-poppins text-[44px] font-semibold leading-normal'>
+            <Typography color="dashboardGreen" font="poppins" fontWeight="semibold" customClassName='  text-[44px] leading-normal'>
             {number}
             </Typography>
         </div>
@@ -25,7 +25,7 @@ export default function RatingComp(props:RatingCompProps) {
             {isIncrease ? <Ascending/> : <Descending/>}
             </div>
             <div>
-                <Typography customClassName='text-[var(--White,#FFF)] font-inter text-[16px] font-medium leading-normal'>
+                <Typography color="white" fontWeight="medium" font="Inter"  customClassName=' text-[16px]  leading-normal'>
                 {rating}
                 </Typography>
             </div>

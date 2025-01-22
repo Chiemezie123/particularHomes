@@ -65,8 +65,7 @@ const InputComponent = <FV extends FieldValues>(
       )}
       <div
         className={cn(
-          `relative w-full rounded-md border px-6 py-0 `,
-          errorMsg ?" border border-error  text-error":"focus-within:border-indigo-500",
+          `relative w-full rounded-md border focus-within:border-[#008273] focus-within:border-[2px]`,
           label ? "px-2 " : "",
           customClassName,
           bgcolor 
@@ -80,7 +79,7 @@ const InputComponent = <FV extends FieldValues>(
         </div>
         <input
           className={cn(
-            `peer block w-full appearance-none  px-4 py-3 text-body-r font-medium placeholder:font-medium placeholder:text-body-r autofill:none focus:outline-none `,
+            `peer block w-full appearance-none rounded-md px-4 py-3 text-body-r font-medium placeholder:font-medium placeholder:text-body-r autofill:none focus:outline-none `,
             bgcolor,
             rest.disabled
               ? "disabled:cursor-not-allowed disabled:bg-primary-light-100 disabled:font-semibold  disabled:text-gray-3"

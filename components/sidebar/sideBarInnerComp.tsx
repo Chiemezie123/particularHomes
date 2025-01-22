@@ -29,8 +29,8 @@ const pathName = usePathname();
       >
         {icon}
       </div>
-      <div className={cn(`${pathName === path ? "text-[#fff]":"text-[#A9CCCC]"}`)}>
-        <Typography customClassName="font-inter text-base font-medium leading-none">{title}</Typography>
+      <div className={cn(``)}>
+        <Typography font="Inter" fontWeight="medium" color={`${pathName === path ?"white":"sideBarColor"}`} customClassName={cn(` leading-none`)}>{title}</Typography>
       </div>
     </div>
         </Link>

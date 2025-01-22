@@ -22,30 +22,31 @@ const CountrySelector: React.FC<MainSelectProps> = (props) => {
       justifyContent: "center",
       alignItems: "center",
       fontFamily: "Poppins",
+      padding:"0px 4px",
       fontStyle: "normal",
       fontWeight: 400,
-      fontSize: "18px",
-      border: "border: 1px solid #DFDFDF",
+      fontSize: "16px",
+      border:"1px solid #DFDFDF",
       textAlign: "start",
       color: "#ADADAD",
-      boxShadow: isFocused ? "0 0 0 2px #654EF2" : "none",
+      boxShadow: isFocused ? "0 0 0 1px #008273" : "none",
       "&:hover": {
-        borderColor: isFocused ? "#654EF2" : "0",
+        borderColor: isFocused ? "#008273" : "0",
       },
     }),
 
     singleValue: (styles: any) => ({
       ...styles,
-      color: "#654EF2", // Apply text color for the selected value
+      color: "#008273", // Apply text color for the selected value
     }),
 
-    option: (styles, { isDisabled, isFocused, isSelected }) => {
+    option: (styles, {isDisabled, isFocused, isSelected }) => {
       return {
         ...styles,
         width: "100%",
-        fontFamily: "Cabinet Grotesk, sans-serif",
+        fontFamily: "Poppins",
         fontStyle: "normal",
-        fontWeight: 700,
+        fontWeight: 400,
         fontSize: "16px",
         backgroundColor: isDisabled
           ? null
@@ -54,7 +55,7 @@ const CountrySelector: React.FC<MainSelectProps> = (props) => {
           : isFocused
           ? ""
           : null,
-        color: isSelected ? "#654EF2" : isFocused ? "" : null,
+        color: isSelected ? "#008273" : isFocused ? "" : null,
         cursor: "pointer",
         display: "flex",
         alignItems: "center",
@@ -64,8 +65,20 @@ const CountrySelector: React.FC<MainSelectProps> = (props) => {
 
     dropdownIndicator: (styles) => ({
       ...styles,
-      borderLeft: "none",
-      color: "red", // Style the dropdown indicator
+      display:"flex",
+      width:"30px",
+      height:"30px",
+      padding:"10px",
+      justifyContent:"center",
+      alignItems:'center',
+      borderRadius:"10px",
+      background:"#F6F6F6",
+      border:"none",
+      borderLeft:"none"
+    }),
+
+    indicatorSeparator: () => ({
+      display: "none", // Hide the default separator
     }),
   };
 
@@ -116,8 +129,7 @@ const CountrySelector: React.FC<MainSelectProps> = (props) => {
         components={{
           DropdownIndicator: (props) => (
             <components.DropdownIndicator {...props}>
-                <div className={styles.svgContent}>
-                <svg
+                 <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
                 height="20"
@@ -132,7 +144,6 @@ const CountrySelector: React.FC<MainSelectProps> = (props) => {
                   stroke-linejoin="round"
                 />
               </svg>
-                </div>
             </components.DropdownIndicator>
           ),
           Option: CustomOption,

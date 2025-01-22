@@ -32,6 +32,7 @@ const config: Config = {
       // brCobane: ["var(--font-brCobane)", ...fontFamily.sans],
       poppins: ['Poppins', ...fontFamily.sans],
       inter: ['Inter', ...fontFamily.sans],
+      montserrat:['Montserrat', ...fontFamily.sans],
       'sf-pro': ['"SF Pro Display"', 'sans-serif'],
     },
     extend: {
@@ -60,55 +61,17 @@ const config: Config = {
       },
       colors: {
         // Blue
-        B50: "var(--color-B50)",
-        B75: "var(--color-B75)",
-        B100: "var(--color-B100)",
-        B200: "var(--color-B200)",
-        B300: "var(--color-B300)",
-        B400: "var(--color-B400)",
-        B500: "var(--color-B500)",
-        // Yellow
-        Y50: "var(--color-Y50)",
-        Y75: "var(--color-Y75)",
-        Y100: "var(--color-Y100)",
-        Y200: "var(--color-Y200)",
-        Y300: "var(--color-Y300)",
-        Y400: "var(--color-Y400)",
-        Y500: "var(--color-Y500)",
-
-        // Green
-        G50: "var(--color-G50)",
-        G75: "var(--color-G75)",
-        G100: "var(--color-G100)",
-        G200: "var(--color-G200)",
-        G300: "var(--color-G300)",
-        G400: "var(--color-G400)",
-        G500: "var(--color-G500)",
-
-        // Red
-        R50: "var(--color-R50)",
-        R75: "var(--color-R75)",
-        R100: "var(--color-R100)",
-        R200: "var(--color-R200)",
-        R300: "var(--color-R300)",
-        R400: "var(--color-R400)",
-        R500: "var(--color-R500)",
-
-
-        // secondary salmon green
-        SLGL: "var(--color-SLGL)",
-        SLGLH: "var(--color-SLGLH)",
-        SLGLA: "var(--color-SLGLA)",
-        SLGN: "var(--color-SLGN)",
-        SLGNH: "var(--color-SLGNH)",
-        SLGB: "var(--color-SLGB)",
-        SLGBH: "var(--color-SLGBH)",
-        SLGBA: "var(--color-SLGBA)",
-        SLGD: "var(--color-SLGD)",
-        SLGDH: "var(--color-SLGDH)",
-        SLGDA: "var(--color-SLGDA)",
-        SLGDD: "var(--color-SLGDD)",
-
+        dashboardGrey:"#828282",
+        dashboardGreen: "#008273",
+        greyish:"#A8A8A8",
+        lightGreyish:"#D7D7D7",
+        darkGreenish:"#002824",
+        lightGreenish:"#003D36",
+        lighterGreenish:"#A9CCCC",
+        dashboardGrey2: "#696969",
+        tabUnderlineColor: "#C9C9C9",
+        sideBarColor:"#A9CCCC",
+        navPathColor:"#003D36",
 
         //Text
         "text-default": "var(--color-text-default)",

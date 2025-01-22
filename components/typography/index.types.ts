@@ -22,76 +22,24 @@ export const variantMapping = {
   export type TypographyVariant = keyof typeof variantMapping;
   
   export type TypographyColors =
-    // Red
-    | "R50"
-    | "R75"
-    | "R100"
-    | "R200"
-    | "R300"
-    | "R400"
-    | "R500"
-    // Green
-    | "GL"
-    | "GLH"
-    | "GLA"
-    | "GN"
-    | "GNH"
-    | "GB"
-    | "GBA"
-    | "GD"
-    | "GDH"
-    | "GDA"
-    | "GDD"
-    // secondary salmon green
-    | "SLGL"
-    | "SLGLH"
-    | "SLGLA"
-    | "SLGN"
-    | "SLGNH"
-    | "SLGB"
-    | "SLGBA"
-    | "SLGD"
-    | "SLGDH"
-    | "SLGDA"
-    | "SLGDD"
-    //Tertiary Gray
-    | "TGL"
-    | "TGLH"
-    | "TGLA"
-    | "TGN"
-    | "TGNH"
-    | "TGB"
-    | "TGBA"
-    | "TGD"
-    | "TGDH"
-    | "TGDA"
-    | "TGDD"
-    // Neutral (Light)
-    | "N0"
-    | "N10"
-    | "N20"
-    | "N30"
-    | "N40"
-    | "N50"
-    // Neutral (Mid)
-    | "N60"
-    | "N70"
-    | "N80"
-    | "N90"
-    | "N100"
-    | "N200"
-    | "N300"
-    | "N400"
-    // Neutral (Dark)
-    | "N500"
-    | "N600"
-    | "N700"
-    | "N800"
-    | "N900"
+    
     //Text Colors
     | "text-default"
-    | "text-light";
-  
+    | "text-light"
+    | "white"
+    | "grey1"
+    | "grey2"
+    | "green1"
+    | "green2"
+    | "green3"
+    | "black"
+    | 'dashboardGrey'
+    | "dashboardGreen"
+    | "dashboardGrey2"
+    | "tabUnderlineColor"
+    | "sideBarColor"
+    | "navPathColor"
+
   export type TypographyAlign =
     | "start"
     | "end"
@@ -110,7 +58,7 @@ export const variantMapping = {
     | "bold"
     | "black";
   
-  export type TypographyFont = "brCobane";
+  export type TypographyFont = "poppins"| "Inter"| "montserrat";
   
   export interface TypographyProps
     extends React.HTMLAttributes<HTMLOrSVGElement> {

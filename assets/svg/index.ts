@@ -10,7 +10,21 @@ import NavBarHomeIcon from "./navBarHomeIcon.svg"
 import ThinkingWoman from './thinkingWoman.svg'
 import Ascending from "./ascending.svg"
 import Descending from "./descending.svg"
-
+import DateIcon from "./dateIcon.svg"
+import Location from "./location.svg"
+import Rating from "./rating.svg"
+import Team from "./team.svg"
+import Mission from "./mission.svg"
+import Vision from "./vision.svg"
+import CloseXIcon from "./closeXicon.svg"
+import ExpandIcon from "./expandIcon.svg"
+import GreenLocationIcon from "./greenLocationIcon.svg"
+import Tick from "./ticked.svg"
+import Minus from "./minus.svg"
+import Plus from "./plus.svg"
+import ArrowLeft from "./arrowLeft.svg"
+import ArrowRight from "./arrowRight.svg"
+import CompressIcon from './compress.svg'
 export {
     DropDown,
     NavBarHomeIcon,
@@ -23,5 +37,20 @@ export {
     SideBarApartmentIcon,
     ThinkingWoman,
     Ascending,
-    Descending
+    Descending,
+    DateIcon,
+    Location,
+    Rating,
+    Team,
+    Mission,
+    Vision,
+    CloseXIcon,
+    ExpandIcon,
+    GreenLocationIcon,
+    Tick,
+    Plus,
+    Minus,
+    ArrowLeft,
+    ArrowRight,
+    CompressIcon
 }
