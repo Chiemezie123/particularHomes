@@ -1,11 +1,12 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { ticketSlice } from "./slices/demo";
 
 export const store = configureStore({
-  reducer: {
-  },
+    reducer:{
+      ticketDetail: ticketSlice.reducer,
+    }
 });
 
 export type RootState = ReturnType<typeof store.getState>;
-// export type AppDispatch = typeof store.dispatch;
 
 export default store;

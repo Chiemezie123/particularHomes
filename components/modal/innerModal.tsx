@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import DetailsComp from "./detailsComp";
-import ImageComp from "./imageComp";
 import houseImageOne from "@/assets/images/houseImageOne.png";
 import houseImageTwo from "@/assets/images/houseImageTwo.png";
 import houseImageThree from "@/assets/images/houseImageThree.png";
 import { innerImageProps } from "./index.types";
+import { CustomSlider } from "../slick";
 
 export default function InnerModal(props: innerImageProps) {
   const featuresArray = [
@@ -24,8 +24,8 @@ export default function InnerModal(props: innerImageProps) {
 
   const imageArray = [
     { image: houseImageOne },
-  { image: houseImageTwo },
-  { image: houseImageThree },
+    { image: houseImageTwo },
+    { image: houseImageThree },
   ];
 
   const [closeDetailsComp, setCloseDetailsComp] = useState<boolean>(false);
@@ -37,12 +37,12 @@ export default function InnerModal(props: innerImageProps) {
   return (
     <div className={`flex w-[912px] h-[656px] items-start shrink-0`}>
       <div className="w-full">
-        <ImageComp
-          imageArray={imageArray}
-          setModalOpen={props.setModalOpen}
-          closeDetailComp={closeDetailsComp}
-          setCloseDetailComp={toggleLeftModal}
-        />
+       
+        <CustomSlider
+         setModalOpen={props.setModalOpen}
+        closeDetailComp={closeDetailsComp}
+        setCloseDetailComp={toggleLeftModal}
+          />
       </div>
       <div>
         <DetailsComp

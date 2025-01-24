@@ -25,18 +25,18 @@ export default function SecondSection() {
           </Typography>
         </div>
         <div className='flex gap-[20px]'>
-        {housingImages.map((el, index) => (
-            <div className="flex">
-            <Image
-              key={index}
-              src={el.pic}
-              alt={`housing-image-${index}`}
-              width={400}
-              height={300}
-              className="object-cover rounded-lg"
-            />
-          </div>
-          ))}
+            {housingImages.map((el, index) => (
+                <div className="flex">
+                <Image
+                  key={index}
+                  src={el.pic}
+                  alt={`housing-image-${index}`}
+                  width={400}
+                  height={300}
+                  className="object-cover rounded-lg"
+                />
+              </div>
+              ))}
         </div>
       </div>
       <div className='relative flex justify-between mt-[100px]'>

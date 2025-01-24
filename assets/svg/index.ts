@@ -25,6 +25,11 @@ import Plus from "./plus.svg"
 import ArrowLeft from "./arrowLeft.svg"
 import ArrowRight from "./arrowRight.svg"
 import CompressIcon from './compress.svg'
+import Star from "./star.svg"
+import SecondSearchIcon from "./secondSearchIcon.svg"
+import Bin from "./bin.svg";
+import Pencil from "./pencil.svg"
+
 export {
     DropDown,
     NavBarHomeIcon,
@@ -52,5 +57,9 @@ export {
     Minus,
     ArrowLeft,
     ArrowRight,
-    CompressIcon
+    CompressIcon,
+    Star,
+    SecondSearchIcon,
+    Bin,
+    Pencil
 }

@@ -72,6 +72,7 @@ const config: Config = {
         tabUnderlineColor: "#C9C9C9",
         sideBarColor:"#A9CCCC",
         navPathColor:"#003D36",
+        filterBy:"#828282",
 
         //Text
         "text-default": "var(--color-text-default)",

@@ -5,7 +5,8 @@ export interface listingCardProps {
     location : string;
     rating: number
     backgroundImage:StaticImageData;
-    onClick : ()=> void
+    onClick : ()=> void;
+    isApartment?:boolean
 }
 
 export interface  visionCardProps {

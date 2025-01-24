@@ -21,6 +21,7 @@ const colorClasses = {
   tabUnderlineColor:"text-tabUnderlineColor",
   sideBarColor:"text-sideBarColor",
   navPathColor: "text-navPathColor",
+  filterBy:"text-filterBy",
   //Text Colors
   "text-default": "text-text-default",
   "text-light": "text-text-light",

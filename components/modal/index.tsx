@@ -66,7 +66,7 @@ function Modal({
           leaveFrom="opacity-100"
           leaveTo="opacity-0"
         >
-          <div className="fixed inset-0 z-[99] bg-[#091E428A]" />
+          <div className="fixed inset-0 z-[99] bg-[rgba(0,0,0,0.10)] backdrop-blur-sm" />
         </TransitionChild>
 
         <div className="fixed inset-0 z-[100] flex w-full items-center justify-center overflow-y-auto hideScrollBar">

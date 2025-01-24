@@ -39,6 +39,7 @@ export const variantMapping = {
     | "tabUnderlineColor"
     | "sideBarColor"
     | "navPathColor"
+    | 'filterBy'
 
   export type TypographyAlign =
     | "start"

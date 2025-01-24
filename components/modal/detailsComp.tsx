@@ -5,7 +5,8 @@ import { detailsComp } from './index.types';
 import { GreenLocationIcon } from '@/assets/svg';
 import { Button } from '../button';
 import { Tick } from '@/assets/svg';
-import { Minus ,Plus} from '@/assets/svg';
+import { Minus ,Plus, Star} from '@/assets/svg';
+
 export default function DetailsComp(props:detailsComp) {
     const {title, location,price,featureArray,MainLocation,closeDetailComp,setCloseDetailComp} = props
 
@@ -32,8 +33,12 @@ export default function DetailsComp(props:detailsComp) {
                         {title}
                     </Typography>
                 </div>
-                <div>
-                    
+                <div className='flex items-center gap-[4px]'>
+                    <Star/>
+                    <Star/>
+                    <Star/>
+                    <Star/>
+                    <Star/>
                 </div>
                 <div className='flex gap-[8px] items-center'>
                     <div>
@@ -97,7 +102,7 @@ export default function DetailsComp(props:detailsComp) {
                 </div>
             </div>
             <div className='w-full flex items-center'>
-                <Button children={'Rent Apartment'} className='flex px-8 py-4 justify-center items-center gap-1 self-stretch bg-[#008273] text-white '/>
+                <Button children={'Rent Apartment'} className='flex px-[5rem] py-4 justify-center items-center gap-1 self-stretch bg-[#008273] text-white '/>
             </div>
         </div>
     </div>

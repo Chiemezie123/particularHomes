@@ -22,6 +22,7 @@ export default function TopTicks() {
             backgroundImage={card.backgroundImage}
             rating={card.rating}
             onClick={handleCLick}
+            isApartment={false}
           />
         ))}
       </div>

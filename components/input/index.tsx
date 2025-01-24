@@ -74,7 +74,7 @@ const InputComponent = <FV extends FieldValues>(
         <div className="absolute left-2 top-1/2 transform -translate-y-1/2 ">
           {icon1 && <div className="fill-current text-Accent-600">{icon1}</div>}
         </div>
-        <div className="absolute right-6 top-1/2 transform -translate-y-1/2 cursor-pointer" >
+        <div className="absolute right-2 top-1/2 transform -translate-y-1/2 cursor-pointer" >
           {icon2 && <div className="" onClick={passwordFunc}>{icon2}</div>}
         </div>
         <input

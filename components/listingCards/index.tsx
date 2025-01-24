@@ -3,13 +3,23 @@ import { Typography } from '../typography';
 import { Location , Rating } from '@/assets/svg';
 import { listingCardProps } from './index.types';
 import Image from 'next/image';
-
+import { Bin, Pencil } from '@/assets/svg';
 export default function ListingCards(props: listingCardProps) {
 
-  const {title, rating, location, backgroundImage, onClick} = props;
+  const {title, rating, location, backgroundImage, onClick, isApartment} = props;
 
   return (
     <div className=' relative flex h-64 p-4 px-3 flex-col justify-end items-start gap-1 flex-[1_0_0] rounded-[12px] cursor-pointer' onClick={onClick}>
+      {isApartment && (
+        <div className='absolute z-10 top-0 right-0 pr-[10px] pt-[10px] flex justify-end items-center gap-2 self-stretch'>
+        <div className='flex w-12 h-12 p-3 justify-center items-center rounded-lg bg-[rgba(0,0,0,0.5)]'>
+          <Pencil/>
+        </div>
+        <div className='flex w-12 h-12 p-3 justify-center items-center rounded-lg bg-[rgba(0,0,0,0.5)]'>
+          <Bin/>
+        </div>
+      </div>
+      )}
     <div className="absolute inset-0 rounded-[12px] overflow-hidden">
         <Image className="absolute" src={backgroundImage} alt="" fill />
         <div
