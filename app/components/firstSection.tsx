@@ -13,7 +13,7 @@ export default function FirstSection() {
     
   return (
         <div className='bg-[#008273]'>
-            <section className="mx-auto max-w-[1440px] relative bg-[#008273] pt-[14px] pl-[30px] h-[630px]">
+            <section className="mx-auto max-w-[1440px] relative bg-[#008273] pt-[14px] pl-[30px] h-[630px] mlg:pr-[30px]">
     {/* Optionally include the background image */}
     {/* <div>
       <Image className="absolute" src={housing} alt="housing" width={400} height={400} />
@@ -50,7 +50,7 @@ export default function FirstSection() {
 rounded-[8px] bg-[#F6F6F6]'/>
       </div>
     </div>
-    <div className='absolute top-[-42px] bottom-0 right-0  w-[774px] h-[713px]'>
+    <div className='absolute top-[-42px] bottom-0 right-0  w-[774px] h-[713px] mlg:w-[500px]'>
     <Image 
         src={housing} 
         alt='housing'  

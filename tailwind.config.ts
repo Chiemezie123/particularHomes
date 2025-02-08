@@ -42,7 +42,7 @@ const config: Config = {
         "h-xxl": ["3rem", { lineHeight: "48px", fontWeight: 700 }],
         "h-xl": ["2rem", { lineHeight: "40px", fontWeight: 700 }],
         "h-l": ["1.5rem", { lineHeight: "24px", fontWeight: 700 }],
-        "h-m": ["1.1875rem", { lineHeight: "24px", fontWeight: 700 }],
+        "h-m": ["1.125rem", { lineHeight: "24px", fontWeight: 700 }],
         "h-s": ["1rem", { lineHeight: "24px", fontWeight: 700 }],
         "h-xs": [".75rem", { lineHeight: "15.96px", fontWeight: 700 }],
 

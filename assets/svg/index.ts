@@ -29,6 +29,8 @@ import Star from "./star.svg"
 import SecondSearchIcon from "./secondSearchIcon.svg"
 import Bin from "./bin.svg";
 import Pencil from "./pencil.svg"
+import Upload from "./sideBarUploadIcon.svg"
+import Caution from "./caution.svg"
 
 export {
     DropDown,
@@ -61,5 +63,7 @@ export {
     Star,
     SecondSearchIcon,
     Bin,
-    Pencil
+    Pencil,
+    Upload,
+    Caution
 }

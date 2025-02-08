@@ -89,8 +89,8 @@ export const CustomSlider = (props:SlickProps) => {
               <CompressIcon />
             </div>
           <Slider {...settings}>
-          {items.map((items:any) => (
-                  <div className={`relative ${props.closeDetailComp ? "w-full" : "w-[580px]"} h-[656px]`}>
+          {items.map((items,index) => (
+                  <div key={index} className={`relative ${props.closeDetailComp ? "w-full" : "w-[580px]"} h-[656px]`}>
                     <Image className="absolute"  src={items.image} alt="background-image" fill />
                   </div>
         ))}

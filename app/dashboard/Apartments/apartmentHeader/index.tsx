@@ -8,7 +8,7 @@ export default function ApartmentHeader() {
 
     const SearchIcon = ()=>{
         return(
-            <div className='flex w-[40px] h-[40px] p-[10px] items-center justify-center bg-[#F6F6F6] rounded-[10px]'>
+            <div className='flex w-[30px] h-[30px] p-[5px] items-center justify-center bg-[#F6F6F6] rounded-[10px]'>
                 <SearchIconImage/>
             </div>
         )
@@ -26,7 +26,7 @@ export default function ApartmentHeader() {
             <Input
                 name="number"
                 placeholder="Search Apartments"
-                customClassName="flex h-14 px-4 py-2 pl-4 justify-between items-center flex-[1_0_0] rounded-lg border border-gray-300 bg-white"
+                customClassName="flex  bg-white"
                 bgcolor="font-poppins text-[16px] font-normal leading-normal "
                 icon2={<SearchIcon/>}
               />

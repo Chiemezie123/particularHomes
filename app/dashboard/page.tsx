@@ -16,11 +16,13 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { queryParamsHelper } from "@/utils/helper";
 import { queryTabs } from "@/constants/data";
 
+export const optionsList = countryList().getData();
+
 export default function Page() {
   const searchParams = useSearchParams();
   const router = useRouter();
   const activeQueryTab = searchParams.get("t") || "Top-Picks";
-  const options = countryList().getData();
+  
   
   const allQueryParamsObj = queryParamsHelper.queryStringToObject(
     searchParams.toString()
@@ -59,7 +61,7 @@ export default function Page() {
           </div>
           <div className="flex items-center flex-[1_0_0] gap-[12px] w-full border-t">
             <div className="flex-1">
-              <CountrySelector options={options} placeholder="select country" />
+              <CountrySelector options={optionsList} placeholder="select country" />
             </div>
             <div className="flex-1">
               <DateSelector />

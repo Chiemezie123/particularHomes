@@ -8,7 +8,8 @@ import {
   SideBarApartmentIcon,
   Team,
   Mission,
-  Vision
+  Vision,
+  Upload
 } from "@/assets/svg";
 import { SideBarInnerProps } from "@/components/sidebar/index.types";
 
@@ -41,6 +42,11 @@ export const sidebarModuleMenus: SideBarInnerProps[] = [
     path: "/dashboard/Apartments",
     title: "My Apartments",
     icon: <SideBarApartmentIcon />,
+  },
+  {
+    path: "/dashboard/upload",
+    title: "upload Apartments",
+    icon: <Upload/>,
   },
   {
     path: "/dashboard/Messages",

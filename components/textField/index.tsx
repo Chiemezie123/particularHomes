@@ -28,7 +28,7 @@ const TextField = React.forwardRef<HTMLInputElement | HTMLTextAreaElement, TextF
     const classes = cn(
       className,
       customClassName,
-      `block w-full h-[44px] text-sm bg-white text-gray-700 placeholder:text-gray-400 border rounded py-2 px-3 focus:border-blue-500 focus:border-2 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-500`,
+      `block w-full font-poppins text-sm bg-white text-gray-700 placeholder:text-gray-400 border rounded py-2 px-3 focus:border-[#008273] focus:border-2 disabled:cursor-not-allowed disabled:bg-gray-100 disabled:text-gray-500`,
       error ? "border-red-400 border-2" : "border-gray-300"
     );
 
@@ -146,6 +146,7 @@ const TextField = React.forwardRef<HTMLInputElement | HTMLTextAreaElement, TextF
             className={classes}
             placeholder={placeholder}
             rows={8}
+            cols={12}
             ref={ref as React.Ref<HTMLTextAreaElement>}
             {...rest}
           />
