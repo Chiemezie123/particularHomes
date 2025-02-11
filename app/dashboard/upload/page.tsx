@@ -8,11 +8,13 @@ import CountrySelector from '@/components/selectCountries';
 import { optionsList } from '../page';
 import { BiDollar } from "react-icons/bi";
 import ImageNotification from '@/components/imageNotification';
+import ImagePreview from '@/components/ImagePreview';
+import { Button } from '@/components/button';
 
 export default function Page() {
   return (
     <div className='w-full h-full py-[16px] bg-[#E6F1F1]'>
-        <div className='w-full flex items-start gap-4 px-6 self-stretch border'>
+        <div className='w-full flex items-start gap-4 px-6 self-stretch'>
             <div className='flex flex-col !w-[700px] pb-6 items-start gap-4 rounded-lg bg-white'>
                 <div className='flex h-[59px] items-center self-stretch'>
                     <div className='flex p-4 items-center gap-1'>
@@ -49,7 +51,7 @@ export default function Page() {
                     </div>
                 </div>
             </div>
-            <div className='w-full flex flex-col rounded-lg bg-white items-start gap-4'>
+            <div className='w-full flex flex-col rounded-lg bg-white items-start gap-4 pb-[24px]'>
                 <div className='flex h-[59px] items-center self-stretch'>
                     <div className='flex p-4 items-center gap-1'>
                         <Typography color='dashboardGreen' font="poppins" className='leading-normal' variant="h-m">
@@ -58,11 +60,14 @@ export default function Page() {
                     </div>
                 </div>
                 <div className='flex flex-col px-4 items-start gap-4 self-stretch w-full'>
-                   <div>
+                   <div className='w-full'>
                    <ImageNotification/>
                    </div>
+                   <div className='w-full'>
+                    <ImagePreview/>
+                   </div>
                    <div>
-
+                    <Button children="Upload Apartment" color="white" variant={"primary"} size={"tetiary"}/>
                    </div>
                 </div>
             </div>

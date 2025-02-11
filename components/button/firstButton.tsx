@@ -2,59 +2,30 @@ import * as React from "react";
 import { cn } from "@/utils/helper";
 import { cva, type VariantProps } from "class-variance-authority";
 
-import { Spinner } from "../loaders";
+import { Spinner } from "../spinner";
 import { Typography } from "../typography";
-
-const buttonVariants = cva(
-  "rounded transition-all ease-in-out duration-400 rounded-[8px]",
+import { TypographyColors } from "../typography/index.types";
+ const buttonVariants = cva(
+  "rounded transition-all ease-in-out duration-400 rounded-[5px]",
   {
     variants: {
       variant: {
         primary:
-          " bg-SLGB hover:bg-SLGBA text-GB disabled:bg-GLA disabled:text-GB  disabled:cursor-not-allowed", // blue
+          " bg-lightGreenish hover:bg-chateau-green-200 focus:bg-chateau-green-500 text-c-m disabled:bg-fuscous-gray-400 disabled:text-black  disabled:cursor-not-allowed", // blue
         secondary:
-          "bg-GB text-N0 hover:bg-GNH disabled:opacity-50 hover:disabled:bg-GLA disabled:cursor-not-allowed", // extra light ash
-        neutral:
-          "bg-N0 hover:bg-N20 text-N700 disabled:bg-N20 disabled:text-N70 disabled:cursor-not-allowed", // white
-        tertiary:
-          "bg-Y300 hover:bg-Y200 text-N0 disabled:bg-Y75 disabled:text-N70 disabled:cursor-not-allowed", // yellow
-        danger:
-          "bg-R400 hover:bg-R300 text-N0 disabled:bg-R75 disabled:text-N20 disabled:cursor-not-allowed", // red
-        plain: "",
+          "bg-GB text-N0 hover:bg-GNH disabled:opacity-50 hover:disabled:bg-GLA disabled:cursor-not-allowed", // extra light
       },
       size: {
-        default: " py-[10px] px-[12px]",
-        plain: "",
+        default: " py-[8] px-[15px]",
+        primary: "py-[7px] px-[48px]",
+        secondary: "py-[14px] px-[14px]",
+        tetiary:  "py-[16px] px-[32px]"
       },
       types: {
         outline: "",
         filled: "",
       },
     },
-    compoundVariants: [
-      {
-        types: "outline",
-        variant: "primary",
-        className:"bg-transparent text-SLGBA border border-SLGBA hover:border-transparent hover:text-GB",
-      },
-      {
-        types: "outline",
-        variant: "secondary",
-        className: "bg-transparent text-GB border border-GB hover:text-N0",
-      },
-      {
-        types: "outline",
-        variant: "tertiary",
-        className:
-          "bg-transparent text-Y300 border border-Y300 hover:border-transparent hover:text-N0",
-      },
-      {
-        types: "outline",
-        variant: "danger",
-        className:
-          "bg-transparent text-R400 border border-R400 hover:border-transparent hover:text-N0",
-      },
-    ],
     defaultVariants: {
       variant: "primary",
       size: "default",
@@ -67,6 +38,8 @@ export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement>,
     VariantProps<typeof buttonVariants> {
   loading?: boolean;
+  Icon?: React.ReactNode;
+  color?:TypographyColors;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
@@ -77,6 +50,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
       types = "filled",
       size,
       children,
+      Icon,
+      color="white",
       loading = false,
       ...props
     },
@@ -86,26 +61,27 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     return (
       <Comp
         className={cn(
-          buttonVariants({ variant, size, types, className}),
-          "flex items-center justify-center gap-4",
+            buttonVariants({ variant, size, types, className }),
+          "flex items-center justify-center gap-[10px]",
         )}
         ref={ref}
         {...props}
       >
         {!loading && (
-          <Typography variant={"div"} className="!text-[inherit]">
+           Icon
+        )}
+        {!loading && (
+          <Typography variant={"div"} color={color} className="">
             {" "}
             <div>{children}</div>
           </Typography>
         )}
         
-        {loading && <Spinner color={variant === "neutral" ? "N700" : "N0"} />}
+        {loading && <Spinner color={variant === "primary" ? "" : ""} />}
       </Comp>
     );
   },
 );
 Button.displayName = "Button";
 
-export default Button;
-
-export {  buttonVariants };
+export { Button, buttonVariants };

@@ -4,6 +4,7 @@ import { Typography } from '@/components/typography';
 import { Input } from '@/components/input';
 import SearchIconImage from "@/assets/svg/secondSearchIcon.svg"
 import DateSelector from '@/components/datePicker';
+import CountrySelector from '@/components/selectCountries';
 export default function ApartmentHeader() {
 
     const SearchIcon = ()=>{
@@ -15,30 +16,30 @@ export default function ApartmentHeader() {
     }
 
   return (
-    <div className='flex p-4 items-center gap-[296px] self-stretch bg-white shadow-[0px_4px_24px_0px_rgba(0,0,0,0.04)]'>
+    <div className='flex p-4 items-center gap-[360px] self-stretch bg-white shadow-[0px_4px_24px_0px_rgba(0,0,0,0.04)]'>
         <div>
             <Typography font="poppins" fontWeight="bold" color="green2" customClassName='text-[16px] leading-normal'>
             My Apartments
             </Typography>
         </div>
-        <div className='flex items-center gap-6 flex-[1_0_0]'>
-            <div>
+        <div className='w-full flex items-center gap-4 flex-[1_0_0]'>
+            <div className='w-full'>
             <Input
                 name="number"
                 placeholder="Search Apartments"
                 customClassName="flex  bg-white"
-                bgcolor="font-poppins text-[16px] font-normal leading-normal "
+                bgcolor="font-poppins text-[16px] font-normal leading-normal"
                 icon2={<SearchIcon/>}
               />
             </div>
-            <div className='flex items-center flex-[1_0_0] gap-[1rem] '>
-                <div>
+            <div className='w-full flex items-center gap-[1rem]'>
+                <div className='w-1/3'>
                 <Typography fontWeight="regular" font="Inter" color="filterBy" customClassName='text-[16px] leading-normal' >
                      Filter by
                 </Typography>
                 </div>
-                <div>
-                    <DateSelector/>
+                <div className='w-full'>
+                <CountrySelector placeholder='date' height='42px' backgroundIconColor=''/>
                 </div>
             </div>
         </div>

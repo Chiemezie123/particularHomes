@@ -31,7 +31,9 @@ import Bin from "./bin.svg";
 import Pencil from "./pencil.svg"
 import Upload from "./sideBarUploadIcon.svg"
 import Caution from "./caution.svg"
-
+import YingYang from "./yingYang.svg"
+import ArrowUp from "./arrowUp.svg"
+import Cancel from "./cancel.svg"
 export {
     DropDown,
     NavBarHomeIcon,
@@ -65,5 +67,8 @@ export {
     Bin,
     Pencil,
     Upload,
-    Caution
+    Caution,
+    YingYang,
+    ArrowUp,
+    Cancel
 }

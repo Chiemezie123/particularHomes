@@ -9,8 +9,8 @@ export default function ImageNotification() {
             <Caution/>
         </div>
         <div>
-            <Typography variant="c-m" color="black">
-            Supports JPG, PNG, and JPEG. Images uploaded should be of reasonable fidelity and must not exceed 5MB 
+            <Typography variant="c-m" color="green2" fontWeight="regular" font="poppins">
+            Supports <strong>JPG</strong>, <strong>PNG</strong>, and <strong>JPEG</strong>. Images uploaded should be of reasonable fidelity and must not exceed <strong>5MB</strong>
             </Typography>
         </div>
     </div>

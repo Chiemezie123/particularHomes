@@ -34,7 +34,7 @@ const DateSelector = () => {
       <input
         ref={dateInputRef}
         type="date"
-        className="appearance-none w-full text-[18px] font-poppins font-normal  text-[#008273] outline-none border-none bg-transparent cursor-pointer"
+        className="appearance-none w-full text-[14px] font-poppins font-normal  text-[#008273] outline-none border-none bg-transparent cursor-pointer"
         value={selectedDate}
         onChange={handleDateChange}
         placeholder="Select a date"
