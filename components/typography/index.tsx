@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { JSX } from "react";
 import { cn } from "@/utils/helper";
 import { cva } from "class-variance-authority";
 
@@ -109,7 +109,6 @@ function Typography(props: TypographyProps) {
   );
 
   return (
-    // @ts-expect-error: Temporarily suppressing type error due to tag type
     <Tag
       className={typography({
         intent: variant,

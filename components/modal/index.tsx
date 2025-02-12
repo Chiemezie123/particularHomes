@@ -94,8 +94,8 @@ function Modal({
 
                   <Button
                     onClick={handleClose}
-                    variant={"plain"}
-                    size={"plain"}
+                    variant={"primary"}
+                    size={"primary"}
                   >
                     <CloseXIcon />
                   </Button>

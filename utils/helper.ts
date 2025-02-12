@@ -1,4 +1,4 @@
-import { propertyStatuses } from "@/constants/data";
+
 import clsx, { ClassValue } from "clsx";
 import { twMerge } from "tailwind-merge";
 

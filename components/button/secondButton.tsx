@@ -35,11 +35,11 @@ const button = cva("", {
     },
     fontWeight: {
       thin: "font-thin",
-      "extra-light": "font-extra-light",
+      "extralight": "font-extra-light",
       light: "font-light",
       regular: "font-regular",
       medium: "font-medium",
-      "semi-bold": "font-semi-bold",
+      "semibold": "font-semi-bold",
       bold: "font-bold",
       "extra-bold": "font-extra-bold",
       black: "font-black",
@@ -57,7 +57,7 @@ const SecondButton: React.FC<ButtonProps> = (props) => {
     loading = false,
     customClassName = "",
     children,
-    fontWeight = "semi-bold",
+    fontWeight = "semibold",
     fit,
     size = "button",
     ...rest

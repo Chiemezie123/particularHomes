@@ -6,9 +6,10 @@ interface ActionCardProps {
   ide?: string;
   name?: string;
   onChange: (imageUrl: string | StaticImageData) => void; // Add onChange prop
+  getId :(id:string)=> void
 }
 
-export default function ActionCard({ ide ,onChange}: ActionCardProps) {
+export default function ActionCard({ ide ,onChange,getId}: ActionCardProps) {
   const [isImage, setImage] = useState<string | StaticImageData | null>(null);
   const inputRef = useRef<HTMLInputElement>(null);
 
@@ -28,10 +29,18 @@ export default function ActionCard({ ide ,onChange}: ActionCardProps) {
     }
   };
 
+  
+  const handleCancel = () => {
+    setImage(null); 
+    if (ide) {
+      getId(ide); 
+    }
+  };
+
   return (
     <div className="flex w-[172px] h-[119px] p-1 justify-center items-center gap-1 rounded-lg border border-[#DFDFDF] bg-white">
       {isImage ? (
-        <div className="relative w-full h-full rounded-[12px] overflow-hidden">
+        <div className="relative w-full h-full rounded-[12px] overflow-hidden cursor-pointer">
           <Image className="absolute" src={isImage} alt="Uploaded image" layout="fill" objectFit="cover" />
           <div
             className="absolute inset-0 flex items-center justify-center"
@@ -42,7 +51,7 @@ export default function ActionCard({ ide ,onChange}: ActionCardProps) {
           />
           <button
             className="absolute top-2 right-2 bg-white rounded-full p-1"
-            onClick={() => setImage(null)}
+            onClick={handleCancel}
           >
             <Cancel />
           </button>

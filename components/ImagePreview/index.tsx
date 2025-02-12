@@ -22,6 +22,17 @@ export default function ImagePreview() {
     setIsIncreaseNumber((props) => [...props, newObJ]);
   };
 
+  const handleDecrease = (id: string) => {
+    // Filter out the object with the matching id
+    const updatedArray = isIncreaseNumber.filter((item) => item.id !== id);
+    setIsIncreaseNumber(updatedArray);
+
+    // If the deleted card was the one being previewed, clear the preview
+    if (isPreviewImage && updatedArray.length === 0) {
+      setIsPreviewImage(null);
+    }
+  };
+
   console.log(isIncreaseNumber, "lets see");
 
   const EmptyState = () => {
@@ -62,10 +73,10 @@ export default function ImagePreview() {
         )}
       </div>
       <div className="flex items-center gap-[1rem]">
-        <div className="w-full flex flex-wrap gap-3 items-center border">
+        <div className="flex flex-wrap gap-3 items-center">
           {isIncreaseNumber &&
             isIncreaseNumber.map((item) => (
-              <ActionCard ide={item.id} name={item.name}    onChange={(imageUrl) => setIsPreviewImage(imageUrl)}/>
+              <ActionCard ide={item.id} name={item.name} getId={(id)=>handleDecrease(id)}   onChange={(imageUrl) => setIsPreviewImage(imageUrl)}/>
             ))}
         </div>
         <div>

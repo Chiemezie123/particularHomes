@@ -14,7 +14,9 @@ export default function Navbar() {
   const onlyFirstPath = pathname.split('/').pop()
  
   function capitalizeFirstLetter(word:string| undefined) {
-    return word.charAt(0).toUpperCase() + word.slice(1);
+      if(word){
+        return word.charAt(0).toUpperCase() + word.slice(1);
+      }
 }
 
   return (

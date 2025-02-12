@@ -5,13 +5,18 @@ import { Typography } from '@/components/typography';
 import { Input } from '@/components/input';
 import { TextField } from '@/components/textField';
 import CountrySelector from '@/components/selectCountries';
-import { optionsList } from '../page';
 import { BiDollar } from "react-icons/bi";
 import ImageNotification from '@/components/imageNotification';
 import ImagePreview from '@/components/ImagePreview';
 import { Button } from '@/components/button';
+import countryList from "react-select-country-list";
 
 export default function Page() {
+    interface CountryOption {
+        label: string;
+        value: string;
+      }
+    const optionsList:CountryOption[] = countryList().getData();
   return (
     <div className='w-full h-full py-[16px] bg-[#E6F1F1]'>
         <div className='w-full flex items-start gap-4 px-6 self-stretch'>
