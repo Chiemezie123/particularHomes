@@ -11,9 +11,9 @@ export default function ImagePreview() {
   const [isIncreaseNumber, setIsIncreaseNumber] = useState([
     { id: nanoid(), name: "image2" },
   ]);
-  const [isPreviewImage, setIsPreviewImage] = useState<
-    string | StaticImageData | null
-  >(null);
+  const [cardImages, setCardImages] = useState<Record<string, string | StaticImageData>>({});
+  const [selectedCardId, setSelectedCardId] = useState<string | null>(null);
+
   const handleIncrease = () => {
     const newObJ = {
       id: nanoid(),
@@ -27,13 +27,31 @@ export default function ImagePreview() {
     const updatedArray = isIncreaseNumber.filter((item) => item.id !== id);
     setIsIncreaseNumber(updatedArray);
 
-    // If the deleted card was the one being previewed, clear the preview
-    if (isPreviewImage && updatedArray.length === 0) {
-      setIsPreviewImage(null);
-    }
+    // Remove the image for the deleted card
+    setCardImages((prev) => {
+      const updatedCardImages = { ...prev };
+      delete updatedCardImages[id];
+
+      // Update selectedCardId after cardImages is updated
+      if (selectedCardId === id) {
+        if (updatedArray.length > 0) {
+          // Find the previous card's ID
+          const previousCardId = updatedArray[updatedArray.length - 1].id;
+          setSelectedCardId(previousCardId);
+        } else {
+          // If no cards are left, set selectedCardId to null
+          setSelectedCardId(null);
+        }
+      }
+
+      return updatedCardImages;
+    });
   };
 
-  console.log(isIncreaseNumber, "lets see");
+  const handleImageChange = (id: string, imageUrl: string | StaticImageData) => {
+    setCardImages((prev) => ({ ...prev, [id]: imageUrl }));
+    setSelectedCardId(id); // Set the selected card to the one with the new image
+  };
 
   const EmptyState = () => {
     return (
@@ -55,14 +73,17 @@ export default function ImagePreview() {
       </div>
     );
   };
+
+
+
   return (
     <div className="flex flex-col gap-[1rem]">
       <div className="flex flex-col justify-center items-center gap-3 h-[400px] self-stretch rounded-lg border border-[#DFDFDF] bg-white cursor-pointer">
-        {isPreviewImage && isPreviewImage ? (
+        {selectedCardId && cardImages[selectedCardId] ? (
           <div className="relative w-full h-full rounded-lg overflow-hidden">
             <Image
               className="absolute"
-              src={isPreviewImage}
+              src={cardImages[selectedCardId]}
               alt="Uploaded image"
               layout="fill"
               objectFit="cover"
@@ -74,10 +95,16 @@ export default function ImagePreview() {
       </div>
       <div className="flex items-center gap-[1rem]">
         <div className="flex flex-wrap gap-3 items-center">
-          {isIncreaseNumber &&
-            isIncreaseNumber.map((item) => (
-              <ActionCard ide={item.id} name={item.name} getId={(id)=>handleDecrease(id)}   onChange={(imageUrl) => setIsPreviewImage(imageUrl)}/>
-            ))}
+          {isIncreaseNumber.map((item) => (
+            <ActionCard
+              key={item.id}
+              ide={item.id}
+              name={item.name}
+              getId={handleDecrease}
+              onChange={(imageUrl) => handleImageChange(item.id, imageUrl)}
+              setImagePic={(id)=>setSelectedCardId(id)}
+            />
+          ))}
         </div>
         <div>
           <ActionButton onClick={handleIncrease} />
